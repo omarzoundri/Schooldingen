@@ -8,21 +8,24 @@ else:
 
 ## EXERCISE 2 ##
 
-n = input("Enter number:")
+n = int(input("Enter number:"))
+v = ""
 for i in range(2, 10):
     if i % n == 0:
-        print(i,"V")
-    else:
-        print(i)
+        v = "V"
+    print(i, v)
+    v = ""
 
 ## EXERCISE 3 ##
 
 n = input("Enter number:")
 def is_priem(n):
-    if n % 2 == 0 and n != 2 or n % 3 == 0 and n != 3:
-        return "False"
+    for i in range(2,n):
+        if (n % i) == 0:
+            print(n,"is not a prime number")
+            break
     else:
-        return "True"
+        print(n,"is a prime number")
 print(is_priem(n))
 
 ## EXERCISE 4 ##
